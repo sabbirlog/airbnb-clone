@@ -34,7 +34,7 @@ function Header() {
       </div>
 
       {/** right */}
-      <div className='flex items-center space-x-4 justify-end px-5 md:px-10'>
+      <div className='flex items-center space-x-4 justify-end'>
         <p className='hidden md:inline text-gray-600 font-medium'>
           become a host
         </p>
