@@ -1,6 +1,8 @@
 import Head from 'next/head';
 import Banner from '../components/Banner';
+import Footer from '../components/Footer';
 import Header from '../components/Header';
+import LargeCard from '../components/LargeCard';
 import MediumCard from '../components/MediumCard';
 import SmallCard from '../components/SmallCard';
 
@@ -41,17 +43,24 @@ export default function Home({ exploreData, mediumCardsData }) {
             ))}
           </div>
         </section>
+        <LargeCard
+          img='https://links.papareact.com/4cj'
+          title='The Greatest Outdoors'
+          description='Wishlists created by Airbnb'
+          buttonText='Get Inspired'
+        />
       </main>
+      <Footer />
     </div>
   );
 }
 
 export async function getStaticProps() {
-  const exploreData = await fetch('https://links.papareact.com/pyp').then(
-    (res) => res.json()
+  const exploreData = await fetch('https://jsonkeeper.com/b/4G1G').then((res) =>
+    res.json()
   );
 
-  const mediumCardsData = await fetch('https://links.papareact.com/zp1').then(
+  const mediumCardsData = await fetch('https://jsonkeeper.com/b/VHHT').then(
     (res) => res.json()
   );
 
